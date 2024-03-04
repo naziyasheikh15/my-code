@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>BASIC CALCULATOR WITH NAZIYA</h1>
+
+    <table border="2">
+      <tr>
+        <td colspan="4"><input type="text" id="result"></td>
+      </tr>  
+        
+        
+        <tr>
+
+            <td><button onclick="addToBox('7')">7</button></td>
+            <td><button onclick="addToBox('8')">8</button></td>
+            <td><button onclick="addToBox('9')">9</button></td>
+            <td><button onclick="addToBox('*')">*</button></td>
+
+        </tr>
+        <tr>
+
+            <td><button onclick="addToBox('4')">4</button></td>
+            <td><button onclick="addToBox('5')">5</button></td>
+            <td><button onclick="addToBox('6')">6</button></td>
+            <td><button onclick="addToBox('-')">-</button></td>
+            
+        </tr>
+        <tr>
+
+            <td><button onclick="addToBox('1')">1</button></td>
+            <td><button onclick="addToBox('2')">2</button></td>
+            <td><button onclick="addToBox('3')">3</button></td>
+            <td><button onclick="addToBox('+')">+</button></td>
+            
+        </tr>
+        <tr>
+
+            <td><button onclick="allclear()">ac</button></td>
+            <td><button onclick="addToBox('0')">0</button></td>
+            <td><button onclick="clearee()">c</button></td>
+            <td><button onclick="calculate()">=</button></td>
+            
+        </tr>
+        
+    </table>
+    </center>
+</body>
+<script>
+function addToBox(num)
+{
+ document.getElementById("result").value +=num
+}
+
+function calculate()
+{
+    res=document.getElementById("result").value
+    document.getElementById("result").value=eval(res)
+}
+
+function allclear()
+{
+    document.getElementById("result").value=" "
+}
+
+function clearee()
+{
+   temp=document.getElementById("result").value
+   document.getElementById("result").value=temp.slice(0,temp.length-1)
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
